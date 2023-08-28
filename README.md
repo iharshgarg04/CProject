@@ -19,6 +19,6 @@ The main objectives of this project are to create a user-friendly train reservat
 - File handling
 - ...
 
-##Design
+## Design
 The program is designed with a modular approach, separating different functionalities into functions. User data and reservations are stored in text files.
 
