@@ -11,6 +11,29 @@ typedef struct
 } pd;
 
 
+int userExits(char *username){
+	FILE* fp;
+	fp = fopen("user.txt","r");
+
+	if(fp==NULL){
+		return 0;
+	}
+
+	char line[100];
+
+	while(fgets(line,sizeof(line),fp)!=NULL){
+		char existinguser[10];
+		sscanf(line , "%*s %s ",existinguser);
+		if(strcmp(existinguser,username)==0){
+			fclose(fp);
+			return 1;
+		}
+	}
+
+	fclose(fp);
+	return 0;
+}
+
 void signup(){
 
 	system("cls");
@@ -20,15 +43,21 @@ void signup(){
 	
     printf("\n  =======================  SIGN UP FORM  =======================\n");
     printf(" \n                       ENTER NAME:-");
-    scanf("%49s", name);  // Use scanf for name
+    scanf("%49s", name);  
     fflush(stdin);  // Clear input buffer
     printf(" \n                       ENTER USERNAME:-");
-    scanf("%9s", username);  // Use scanf for username
-    fflush(stdin);  // Clear input buffer
-    printf(" \n                       ENTER PASSWORD:-");
-    scanf("%9s", pass);  // Use scanf for password
+    scanf("%9s", username);  
     fflush(stdin);  // Clear input buffer
 
+	if(userExits(username)){
+		printf("\n  Username '%s' already exists. Please choose a different username.\n", username);
+		getch();
+        return; 
+	}
+
+    printf(" \n                       ENTER PASSWORD:-");
+    scanf("%9s", pass);  
+    fflush(stdin);  
 
 	FILE *fp;
 
@@ -219,23 +248,28 @@ int login()
 		printf(" \n                       ENTER USERNAME:-");
 		scanf("%s", &uname);
 		printf(" \n                       ENTER PASSWORD:-");
-		while (i < 10)
+		i=0;
+		while (1)
 		{
-			pass[i] = getch();
-			c = pass[i];
-			if (c == 13)
-			{
+
+			c=getch();
+			
+			if(c==13){
+				pass[i]='\0';
 				break;
 			}
-			else
-			{
+			else if(c==8){
+				if(i>0){
+					i--;
+					printf("\b \b");
+				}
+			}
+			else{
+				pass[i]=c;
+				i++;
 				printf("*");
 			}
-			i++;
 		}
-
-		pass[i] = '\0';
-
 
 		if (verifyuser(uname,pass)==1)
 		{
@@ -340,6 +374,11 @@ void cancel(){
 	printf("\nEnter your Name: ");
 	fflush(stdin);
 	scanf("%s",&name);
+	char train_num[10];
+	printf("\nEnter your train_num: ");
+	fflush(stdin);
+	scanf("%s",&train_num);
+	
 	FILE* fp,*tmp;
 
 	fp = fopen("resevation.txt","r");
@@ -355,9 +394,11 @@ void cancel(){
 
 	while(fgets(line,sizeof(line),fp)!=NULL){
 		char currName[50];
-		sscanf(line,"%s",currName);\
+		char trainNum[10];
+		char seatNo[10];
+		sscanf(line,"%s %s %s ",currName,seatNo,trainNum);
 
-		if(strcmp(name,currName)==0){
+		if(strcmp(name,currName)==0 && strcmp(train_num,trainNum)==0){
 			reservationfound = 1;
             continue; 
 		}
