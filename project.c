@@ -78,63 +78,63 @@ void specifictrain(int train_num)
 
 	if (train_num == 1001)
 	{
-		printf("\nTrain:\t\t\tRed Lines Express");
-		printf("\nDestination:\t\tBoston to Manhattan");
+		printf("\nTrain:\t\t\tYoga Express");
+		printf("\nDestination:\t\tDelhi Shahdra to Muzaffarnagar");
 		printf("\nDeparture:\t\t9am ");
 	}
 	if (train_num == 1002)
 	{
-		printf("\nTrain:\t\t\tRed Lines Express");
-		printf("\nDestination:\t\tManhattan to Boston");
+		printf("\nTrain:\t\t\tAndhra Pradesh Express");
+		printf("\nDestination:\t\tVisakhapatnam To New Delhi");
 		printf("\nDeparture:\t\t12pm");
 	}
 	if (train_num == 1003)
 	{
-		printf("\nTrain:\t\t\tLA City Express");
-		printf("\nDestination:\t\tBoston to L.A");
+		printf("\nTrain:\t\t\tAvantika Express");
+		printf("\nDestination:\t\tIndore Jn To Mumbai Cenral");
 		printf("\nDeparture:\t\t8am");
 	}
 	if (train_num == 1004)
 	{
-		printf("\nTrain:\t\t\tLA City Express");
-		printf("\nDestination:\t\tL.A to Boston");
+		printf("\nTrain:\t\t\tChamundi Express");
+		printf("\nDestination:\t\tBangalore To Mysore");
 		printf("\nDeparture:\t\t11am ");
 	}
 	if (train_num == 1005)
 	{
-		printf("\nTrain:\t\t\tIron City Express");
-		printf("\nDestination:\t\tBoston to Chicago");
+		printf("\nTrain:\t\t\tSewagram Express");
+		printf("\nDestination:\t\tMumbai To Nagpur");
 		printf("\nDeparture:\t\t7am");
 	}
 	if (train_num == 1006)
 	{
-		printf("\ntrain:\t\t\tIron City Express");
-		printf("\nDestination:\t\tChicago to Boston");
-		printf("\nDeparture:\t\t9.30am ");
+		printf("\nTrain:\t\t\tYoga Express");
+		printf("\nDestination:\t\tDelhi Shahdra to Muzaffarnagar");
+		printf("\nDeparture:\t\t9am ");
 	}
 	if (train_num == 1007)
 	{
-		printf("\ntrain:\t\t\tKeystone Express");
-		printf("\nDestination:\t\tBoston to Washington");
-		printf("\nDeparture:\t\t1pm ");
+		printf("\nTrain:\t\t\tAndhra Pradesh Express");
+		printf("\nDestination:\t\tVisakhapatnam To New Delhi");
+		printf("\nDeparture:\t\t12pm");
 	}
 	if (train_num == 1008)
 	{
-		printf("\ntrain:\t\t\tKeystone Express");
-		printf("\n Destination:\t\tWashington to Boston");
-		printf("\nDeparture:\t\t4pm ");
+		printf("\nTrain:\t\t\tAvantika Express");
+		printf("\nDestination:\t\tIndore Jn To Mumbai Cenral");
+		printf("\nDeparture:\t\t8am");
 	}
 	if (train_num == 1009)
 	{
-		printf("\ntrain:\t\t\tMeteor Express");
-		printf("\nDestination:\t\tBoston to Miami");
-		printf("\nDeparture:\t\t3.35pm ");
+		printf("\nTrain:\t\t\tChamundi Express");
+		printf("\nDestination:\t\tBangalore To Mysore");
+		printf("\nDeparture:\t\t11am ");
 	}
 	if (train_num == 1010)
 	{
-		printf("\ntrain:\t\t\tMeteor Express");
-		printf("\nDestination:\t\tMiami to Boston");
-		printf("\nDeparture:\t\t1.15 ");
+		printf("\nTrain:\t\t\tSewagram Express");
+		printf("\nDestination:\t\tMumbai To Nagpur");
+		printf("\nDeparture:\t\t7am");
 	}
 }
 
@@ -200,19 +200,19 @@ void viewdetails(void)
 {
 
 	system("cls");
-	printf("-----------------------------------------------------------------------------");
+    printf("-----------------------------------------------------------------------------");
 	printf("\nTr.No\tName\t\t\tDestinations\t\tCharges\t\tTime\n");
 	printf("-----------------------------------------------------------------------------");
-	printf("\n1001\tRed Lines Express\tBoston to Manhattan\tRs.5000\t\t9am");
-	printf("\n1002\tRed Lines Express\tManhattan To Boston\tRs.5000\t\t12pm");
-	printf("\n1003\tLA City Express\t\tBoston To L.A\t\tRs.4500\t\t8am");
-	printf("\n1004\tLA City Express\t\tL.A To Boston\t\tRs.4500\t\t11am");
-	printf("\n1005\tIron City Express\tBoston To Chicago\tRs.4000\t\t7am");
-	printf("\n1006\tIron City Express\tChicago To Boston\tRs.4000\t\t9.30am");
-	printf("\n1007\tKeystone Express\tBoston To Washington\tRs.3500\t\t1pm");
-	printf("\n1008\tKeystone Express\tWashington To Boston\tRs.3500\t\t4pm");
-	printf("\n1009\tMeteor Express\t\tBoston To Miami\t\tRs.6000\t\t3.35pm");
-	printf("\n1009\tMeteor Express\t\tMiami To Boston\t\tRs.6000\t\t4.15pm");
+	printf("\n1001\tYoga Express\t\t\tDelhi Shahdra to Muzaffarnagar\tRs.5000\t\t9am");
+	printf("\n1002\tAndhra Pradesh Express\t\tVisakhapatnam To New Delhi\t\tRs.5000\t\t12pm");
+	printf("\n1003\tAvantika Express\t\tIndore Jn To Mumbai Cenral\t\tRs.4500\t\t8am");
+	printf("\n1004\tChamundi Express\t\tBangalore To Mysore\t\t\tRs.4500\t\t11am");
+	printf("\n1005\tSewagram Express\t\tMumbai To Nagpur\t\t\tRs.4000\t\t7am");
+	printf("\n1001\tYoga Express\t\t\tDelhi Shahdra to Muzaffarnagar\t\tRs.5000\t\t9am");
+	printf("\n1002\tAndhra Pradesh Express\t\tVisakhapatnam To New Delhi\t\tRs.5000\t\t12pm");
+	printf("\n1003\tAvantika Express\t\tIndore Jn To Mumbai Cenral\t\tRs.4500\t\t8am");
+	printf("\n1004\tChamundi Express\t\tBangalore To Mysore\t\t\tRs.4500\t\t11am");
+	printf("\n1005\tSewagram Express\t\tMumbai To Nagpur\t\t\tRs.4000\t\t7am");
 }
 
 
